@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Page-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="loginscreens" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gjU-A1-W1k">
+                                <rect key="frame" x="89" y="133" width="194" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GYH-xD-yXu">
+                                <rect key="frame" x="89" y="203" width="194" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1o-e6-aQF">
+                                <rect key="frame" x="160" y="411" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nYe-TR-uCM"/>
+                                    <segue destination="2SI-bP-gDm" kind="show" id="cFw-kr-rgA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5t-Jx-9WW">
+                                <rect key="frame" x="138" y="47" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Login Page" image="lol" id="UHV-qj-hRX"/>
+                    <connections>
+                        <outlet property="InsertPassword" destination="GYH-xD-yXu" id="Ssi-CN-WyD"/>
+                        <outlet property="InsertUsername" destination="gjU-A1-W1k" id="E7M-ww-nIN"/>
+                        <outlet property="Label" destination="Q5t-Jx-9WW" id="gkn-R0-W5m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="124"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="EFf-68-iSu">
+            <objects>
+                <tabBarController id="aE1-Da-QPu" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="SBe-aH-Cde">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kek-J9-kwx" kind="relationship" relationship="viewControllers" id="sLD-o2-DPa"/>
+                        <segue destination="2SI-bP-gDm" kind="relationship" relationship="viewControllers" id="YPU-tO-72n"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lee-cN-o08"/>
+                        <segue destination="Prf-SD-ZLm" kind="relationship" relationship="viewControllers" id="9SS-Qj-67m"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jq-QL-EYp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="-734"/>
+        </scene>
+        <!--Nothing on here yet-->
+        <scene sceneID="ESq-VY-k1W">
+            <objects>
+                <viewController id="kek-J9-kwx" customClass="NewViewController" customModule="loginscreens" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KS5-m4-m1B"/>
+                        <viewControllerLayoutGuide type="bottom" id="tn5-Qe-9ZE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i9T-gJ-oXc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="One more not salty player in this world..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j7u-Pj-ehl">
+                                <rect key="frame" x="67" y="152" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Nothing on here yet" image="lol" id="j2D-s8-QqP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QBf-Cv-HWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="124"/>
+        </scene>
+        <!--My Life is Salty-->
+        <scene sceneID="xwq-wm-aNR">
+            <objects>
+                <viewController id="2SI-bP-gDm" customClass="thirdViewController" customModule="loginscreens" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aRZ-0H-Bwp"/>
+                        <viewControllerLayoutGuide type="bottom" id="vdc-Az-TiY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xmz-Qk-KVF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leagueimg" translatesAutoresizingMaskIntoConstraints="NO" id="Kz8-uI-mcD">
+                                <rect key="frame" x="0.0" y="28" width="375" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZ7-r4-4GX">
+                                <rect key="frame" x="142" y="462" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="I hate League"/>
+                                <connections>
+                                    <segue destination="kek-J9-kwx" kind="show" id="v8X-fS-BH4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVr-rA-QkC">
+                                <rect key="frame" x="141" y="367" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="I love League!"/>
+                                <connections>
+                                    <segue destination="Prf-SD-ZLm" kind="show" id="rYD-MS-hUB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Life is Salty" image="lol" id="nKq-JN-fia"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wwu-tf-hY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1477.5999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--LOL-->
+        <scene sceneID="PCF-Ba-b1x">
+            <objects>
+                <viewController id="Prf-SD-ZLm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MgT-rc-v7h"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gj6-QJ-g8u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l4C-MZ-fRG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cs_bg_champions" translatesAutoresizingMaskIntoConstraints="NO" id="wxU-6Z-2Jc">
+                                <rect key="frame" x="16" y="20" width="343" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qg-4r-yQt">
+                                <rect key="frame" x="145" y="355" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="I want More!"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmc-VD-Rfa">
+                                <rect key="frame" x="133" y="415" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="I hate League...."/>
+                                <connections>
+                                    <segue destination="kek-J9-kwx" kind="show" id="CYz-8G-YNI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="LOL" image="lol" id="OYq-uf-oLt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJ6-Ig-4XG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2253.5999999999999" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cs_bg_champions" width="1384" height="850"/>
+        <image name="leagueimg" width="4096" height="2538"/>
+        <image name="lol" width="36" height="36"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rYD-MS-hUB"/>
+        <segue reference="YPU-tO-72n"/>
+        <segue reference="v8X-fS-BH4"/>
+    </inferredMetricsTieBreakers>
+</document>
