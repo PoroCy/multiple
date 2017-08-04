@@ -9,13 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBAction func LoginButton(_ sender: Any) {
+    }
 
+    @IBOutlet weak var Label: UILabel!
+    
+    @IBOutlet weak var InsertUsername: UITextField!
+    
+    @IBOutlet weak var InsertPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+       override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
